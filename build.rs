@@ -10,8 +10,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-extern crate gcc;
+extern crate cc;
 
 fn main() {
-    gcc::compile_library("libkvm.a", &["src/kvm.c"]);
+    cc::Build::new()
+        .file("src/kvm.c")
+        .compile("libkvm.a")
 }
