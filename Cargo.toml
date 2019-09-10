@@ -13,13 +13,12 @@ build = "build.rs"
 [dependencies]
 clippy = {version = "0.0.23", optional = true}
 errno = "0.1.4"
-ioctl = "0.3.3"
 libc = "0.2"
 log = "0.3"
 memmap = "0.2.1"
 
 [build-dependencies]
-gcc = "0.3"
+cc = "1.0"
 
 [features]
 default = []
